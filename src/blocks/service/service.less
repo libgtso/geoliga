@@ -1,0 +1,163 @@
+.service {
+	margin:70px 0;
+
+	&-content {
+		width: 1150px;
+		margin: 0 auto;
+	}
+
+	&-unit {
+		margin-bottom: 30px;
+
+		&_img,
+		&_img-forward {
+			width: 568px;
+			height: 267px;
+			position: relative;
+
+			& > img {
+				max-width: 568px;
+				max-height: 267px;
+				width: auto;
+				height: auto;
+			}
+		}
+
+		&_img {
+			float: left;
+		}
+
+		&_img-forward {
+			float: right;
+			margin-right: 14px;
+		}
+
+		&_desc-first,
+		&_desc-forward,
+		&_desc-last {
+			width: 380px;
+			background: #fff;
+			position: relative;
+			
+			&:before {
+				content:'';
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				background: #fff;
+				top: 33px;
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				position: absolute;
+				top: 0;
+				width: 208px;
+				height: 267px;
+				content:'';
+			}
+		}
+
+		&_desc-first,
+		&_desc-last {
+			margin-left: 568px;
+		}
+
+		&_desc-forward {
+			margin-left: 188px;
+		}
+
+		&_desc-first:before,
+		&_desc-last:before {
+			left: -7px;
+		}
+
+		&_desc-forward:before {
+			right: -7px;
+		}
+
+		&_desc-first:after {
+			background:url(../images/road.png);
+			right: 50%;
+			margin-right: -399px;
+		}
+
+		&_desc-forward:after {
+			background:url(../images/lake.png) no-repeat;
+			left:50%;
+			margin-left: -399px;
+			height: 237px;
+		}
+
+		&_desc-last:after {
+			background:url(../images/prud.png) 100% 50% no-repeat;
+			right: 50%;
+			margin-right: -399px;
+		}
+
+		&_link,
+		&_title,
+		&_txt {
+			margin-left: 40px;
+			display: block;
+		}
+
+		&_title {
+			padding-top: 30px;
+			font-size: 23px;
+			letter-spacing: 2px;
+			color: @c-brown;
+			font-family: 'FuturaPTHeavy', sans-serif;
+			font-weight: bold;
+		}
+
+		&_txt {
+			margin-top: 15px;
+			line-height: 1.9;
+			width: 320px;
+			padding-bottom: 30px;
+			border-bottom: 1px solid #cccccc;
+		}
+
+		&_link {
+			padding: 15px 0 23px 30px;
+			color: #817d79;
+			position: relative;
+			text-decoration: none;
+
+			&:before {
+				position: absolute;
+				content: url(../images/readnext.png);
+				top: 14px;
+				left: -5px;
+			}
+
+			&:after {
+				position: absolute;
+				content: url(../images/arrow.png);
+				top: 14px;
+				right: 50%;
+			}
+		}
+	}
+}
+
+.accel {
+	width: 35px;
+	height: 35px;
+	background-color: #3f210d;
+	background-image: url(../images/lens.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;	
+	position: absolute;
+	top: 0;
+	cursor: pointer;
+
+	&:hover {
+		background-color:#e8c679;
+	}
+
+	&-left {
+		right: 0;
+	}
+}

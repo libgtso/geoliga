@@ -1,0 +1,96 @@
+{% set list = [
+	{
+		"title": "О компании",
+		"link": "#"	
+	},
+	{
+		"title": "Услуги",
+		"link": "/1"
+	},
+	{
+		"title": "Стоимость работы",
+		"link": "/2"
+	},
+	{
+		"title": "Контакты",
+		"link": "/3"
+	}
+]%}
+
+{% set longlist = [
+	{
+		'title': 'Берего-укрепление',
+		'href': './'
+	},
+	{
+		'title': 'Укрепление откосов',
+		'href': './'
+	},
+	{
+		'title': 'Искусственные пруды',
+		'href': './'
+	},
+	{
+		'title': 'Террасирование участка',
+		'href': './'
+	},
+	{
+		'title': 'Экопарковки и дорожки',
+		'href': './'
+	},
+	{
+		'title': 'Водолазные работы',
+		'href': './'
+	},
+	{
+		'title': 'Слипы для катеров и яхт',
+		'href': './'
+	},
+	{
+		'title': 'Заборы и ограждения',
+		'href': './'
+	},
+	{
+		'title': 'Гидроизоляция',
+		'href': './'
+	},
+	{
+		'title': 'Строительство дренажа',
+		'href': './'
+	},
+	{
+		'title': 'Ландшафтный дизайн',
+		'href': './'
+	}
+]%}
+<div class="header">
+	<div class="header__wrapper">
+		<div class="header__logo">
+			<a href="./">
+				<img class="header__pict" src="./images/logo.png" alt="geoliga.ru">
+			</a>
+			<ul class="header-menu">
+				{% for item in longlist %}
+					<li class="header-list">
+						<a href="{{item.href}}">
+							{{item.title}}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="header__info">
+			<ul class="header__info_list">
+				{% for item in list %}
+					<li class="header__info_item"><a class="header__info_link" href="{{item.link}}">{{item.title}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="header__phone">
+			<p class="header__phone_number">
+				8 495 227 27 05
+			</p>
+			<span class="header-call">позвонить мне</span>
+		</div>
+	</div>
+</div>

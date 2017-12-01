@@ -1,0 +1,29 @@
+{% set slider = [
+	{
+		'img': './images/geoliga.png',
+		'txt': 'Укрепление береговой линии',
+		'alt': 'Укрепление береговой линии'
+	},
+	{
+		'img': './images/geoliga.png',
+		'txt': 'Укрепление береговой линии',
+		'alt': 'Укрепление береговой линии'
+	},
+	{
+		'img': './images/geoliga.png',
+		'txt': 'Укрепление береговой линии',
+		'alt': 'Укрепление береговой линии'
+	}
+]%}
+
+<div class="slider">
+	<ul class="slider-list carousel">
+		{% for item in slider %}
+			<li class="slider-item">
+				<img src="{{item.img}}" alt="{{item.alt}}">
+				<span class="slider-txt">{{item.txt}}</span>
+				<span class="slider-order">Заказать расчет</span>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

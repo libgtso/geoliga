@@ -1,0 +1,108 @@
+{% set list = [
+	{
+		"title": "О нас",
+		"list": [
+			{
+				"link": "#",
+				"title": "О компании"
+			},
+			{
+				"link": "#",
+				"title": "Услуги"
+			},
+			{
+				"link": "#",
+				"title": "Стоимость работ"
+			},
+			{
+				"link": "#",
+				"title": "Контакты"
+			}
+		]
+	},
+	{
+		"title": "Наши услуги",
+		"list": [
+			{
+				"link": "#",
+				"title": "Берегоукрепление"
+			},
+			{
+				"link": "#",
+				"title": "Укрепление склона"
+			},
+			{
+				"link": "#",
+				"title": "Искусственные пруды"
+			},
+			{
+				"link": "#",
+				"title": "Террасирование участка"
+			}
+		]
+	},
+	{
+		"title": "Статьи о строительстве",
+		"list": [
+			{
+				"link": "#",
+				"title": "--"
+			},
+			{
+				"link": "#",
+				"title": "--"
+			},
+			{
+				"link": "#",
+				"title": "--"
+			},
+			{
+				"link": "#",
+				"title": "--"
+			}
+		]
+	}
+]
+%}
+
+<div class="footer">
+	<div class="footer__info">
+		<div class="column footer__info_left">
+			<div class="footer__logo">
+				<a class="footer__logo_link" href="/"><img src="./images/logo__footer.png" alt="Геолига"></a>
+			</div>
+			<div class="footer__phone">
+				<p class="footer__phone_text">
+					Тел:
+				</p>
+				<p class="footer__phone_number">
+					8 495 227 07 55
+				</p>
+			</div>
+			<div class="footer__addr">
+				<p class="footer__addr_text">
+					127540, Москва, ул. Дубнинская, д. 6а, 1 этаж.
+				</p>
+			</div>
+		</div>
+		<div class="footer__menu">
+			{% for item in list %}
+				<div class="footer__about">
+					<div class="title footer__title">
+						{{item.title}}
+					</div>
+					<ul class="footer__list">
+						{% for peach in item.list %}
+							<li class="footer__list_item">
+								<a class="footer__link" href="{{peach.link}}">{{peach.title}}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="footer__copyright">
+		2016 &copy; geoliga.ru
+	</div>
+</div>

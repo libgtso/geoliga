@@ -1,0 +1,68 @@
+.about {
+	margin: 0 100px;
+
+	&__header {
+		width: 275px;
+	    position: absolute;
+	    right: 0;
+	}
+}
+.about__left,
+.about__right {
+	width: 40%;
+	display: inline-block;
+}
+
+.about__left {
+	text-align: right;
+	position: relative;
+	height: 800px;
+	&:before {
+		content:'';
+		position: absolute;
+		width: 594px;
+		height: 723px;
+		top: 70px;
+		right: -70px;
+		background: url(../images/zamok.png) 50% 50% no-repeat;
+	}
+}
+.about__right {
+	margin-left: 80px;
+	margin-top: 15px;
+	line-height: 1.8;
+}
+.about__right_text > p {
+	padding-bottom: 40px;
+	font-size: 15px;
+	color: #6c5b43;
+}
+.about-right_text-att {
+	font-weight: bold;
+	margin-bottom: -5px;
+}
+
+.about__list {
+	margin-top: -30px;
+	margin-bottom: 55px;
+	&_item {
+		margin-bottom: 20px;
+		margin-left: 50px;
+		font-size: 17px;
+		position: relative;
+		color: #6c5b43;
+	}
+	&_item:before {
+		position: absolute;
+		content:'';
+		top: 5px;
+		left: -45px;
+		background: url(../images/list.png);
+		width: 21px;
+		height: 35px;
+	}
+}
+
+.about__right_text:last-child {
+	margin-bottom: 40px;
+}

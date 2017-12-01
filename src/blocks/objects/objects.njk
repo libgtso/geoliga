@@ -1,0 +1,36 @@
+{% set objects = [
+	{
+		'img1': './images/hill.png',
+		'img2': './images/stones.png',
+		'alt1': 'До реконструкции',
+		'alt2': 'После реконструкции'
+	},
+	{
+		'img1': './images/hill.png',
+		'img2': './images/stones.png',
+		'alt1': 'До реконструкции',
+		'alt2': 'После реконструкции'
+	},
+	{
+		'img1': './images/hill.png',
+		'img2': './images/stones.png',
+		'alt1': 'До реконструкции',
+		'alt2': 'После реконструкции'
+	}
+]%}
+
+<div class="objects">
+	<div class="objects-title title">Объекты реконструкции</div>
+	<ul class="objects-carousel carousel">
+		{% for item in objects %}
+			<li class="objects-item">
+				<img class="objects-img" src="{{item.img1}}" alt="{{item.alt1}}">
+				<img class="objects-img" src="{{item.img2}}" alt="{{item.alt2}}">
+				<div>
+					<span class="objects-desc">До</span>
+					<span class="objects-desc">После</span>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

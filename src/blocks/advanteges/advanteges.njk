@@ -1,0 +1,40 @@
+{% set advan = [
+	{
+		'img': './images/advclap.png',
+		'alt': 'Более 10 лет опыта',
+		'logo': './images/ten.png',
+		'desc': 'Более 10 лет<br>опыта',
+		'type': 'clap'
+	},
+	{
+		'img': './images/advpen.png',
+		'alt': 'Гарантия до 5 лет',
+		'logo': './images/star.png',
+		'desc': 'Гарантия<br>до 5 лет',
+		'type': 'pen'
+	},
+	{
+		'img': './images/advkeys.png',
+		'alt': 'Работы &laquoпод ключ&raquo',
+		'logo': './images/key.png',
+		'desc': 'Работы<br>под &laquoключ&raquo',
+		'type': 'keys'
+	},
+	{
+		'img': './images/advpig.png',
+		'alt': 'Справедливые цены',
+		'logo': './images/finger.png',
+		'desc': 'Справедливые<br>цены',
+		'type': 'pig'
+	}
+]%}
+
+<div class="advanteges">
+	{% for item in advan %}
+		<div class="advanteges-img{% if item.type %} advanteges-img_{{item.type}} {% endif %}">
+			<img src="{{item.img}}" alt="{{item.alt}}">
+			<img class="advanteges-logo" src="{{item.logo}}" alt="">
+			<span class="advanteges-sign">{{item.desc}}</span>
+		</div>
+	{% endfor %}
+</div>

@@ -1,0 +1,150 @@
+@import "../base/var";
+
+.header__wrapper {
+	margin: 0 auto;
+	text-align: center;
+	display: table;
+	position: relative;
+}
+
+.header__logo {
+	background-color: #fff;
+	display: table-cell;
+	text-align: left;
+	padding-right: 80px;
+	padding-left: 45px;
+	padding-top: 45px;
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -570px;
+}
+
+.header__pict {
+	margin-top: -30px;
+}
+
+.header__info {
+	padding-left: 273px;
+	display: table-cell;
+	text-align: left;
+	&_item {
+		display: inline-block;
+		margin-left: 30px;
+		margin-right: 20px;
+		text-transform: uppercase;
+		font-family: 'FuturaPTHeavy', sans-serif;
+		font-size: 13px;
+
+		&:first-child {
+			margin-left: 60px;
+		}
+
+		&:last-child {
+			margin-right: 140px;
+		}
+	}
+
+	&_link {
+		color: #b18f3e;
+		font-size: 13px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		display: block;
+	}
+}
+
+.header__phone {
+	display: table-cell;
+	margin-left: 95px;
+	position: relative;
+	
+	&:before {
+		position: absolute;
+		content: '';
+		background: url(../images/phone.png);
+		top: 23px;
+		left: -65px;
+		width: 53px;
+		height: 53px;
+	}
+
+	&_number {
+		display: block;
+		font-size: 22px;
+		font-weight: bold;
+		color: #a16e55;
+		font-family: 'MuseoSansCyrl700';
+	}
+}
+
+.header-menu {
+	padding-top: 35px;
+	padding-bottom: 25px;
+	position: relative;
+
+	&:before,
+	&:after {
+		position: absolute;
+		content: '';
+		height: 1px;
+		width: 200px;
+		background: #e5dbcf;
+		left: 0;
+	}
+
+	&:before {
+		top: 15px;
+	}
+
+	&:after {
+		top: 17px;
+	}
+}
+
+.header-list {
+	margin-bottom: 22px;
+
+	& > a {
+		text-decoration: none;
+		color: #916336;
+		position: relative;
+
+		&:hover {
+			color:#b59a59;
+
+			&:before {
+				position: absolute;
+				content: '';
+				width: 5px;
+				height: 5px;
+				background: #b59a59;
+				top: 7px;
+				left: -15px;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+.header-call {
+	display: block;
+	margin-left: 60px;
+	margin-top: -3px;
+	border-bottom: 1px dotted #000;
+	font-family: 'FuturaPTHeavy';
+	font-size: 17px;
+	position: relative;
+	cursor: pointer;
+	
+	&:before {
+		position: absolute;
+		content: '';
+		background: url(../images/arow.png);
+		top: 9px;
+		left: -13px;
+		width: 11px;
+		height: 7px;
+	}
+}

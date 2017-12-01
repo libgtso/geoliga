@@ -1,0 +1,113 @@
+.slider {
+
+	&-list {
+		text-align: center;
+		position: relative;
+	}
+
+	&-item {
+		position: relative;
+
+		& > img {
+			max-width: 1400px;
+			max-height: 500px;
+			width: auto;
+			height: auto;
+		}
+	}
+	
+	&-txt {
+		position: absolute;
+		top: 120px;
+		font-size: 72px;
+		left: 50%;
+		color: #fff;
+		text-align: left;
+		width: 600px;
+		line-height: 1;
+		margin-left: -150px;
+		font-family: 'FuturaPTHeavy';	
+	}
+
+	&-order {
+		position: absolute;
+		bottom: 131px;
+		left: 50%;
+		color: #fff;
+		display: block;
+		margin-left: -154px;
+		background: #ba984a;
+		padding: 20px 40px 20px 60px;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-family: 'FuturaPTHeavy';
+		font-size: 18px;
+		letter-spacing: 2px;
+		border-radius: 2px;
+		cursor: pointer;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 22px;
+			left: 25px;
+			background: url(../images/calc.png) 50% 50%;
+			width: 19px;
+			height: 20px;
+		}
+	}
+}
+
+.slider-list .owl-dots {
+	bottom: 80px;
+	right: 50%;
+	margin-right: 65px;
+	width: 100px;
+}
+
+.slider-list .owl-dot {
+	background: #fff;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.slider-list .owl-prev,
+.slider-list .owl-next {
+	width: 30px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: 220px;
+	background: #fff;
+	border-radius: 50%;
+	height: 30px;
+}
+
+.slider-list .owl-prev:before {
+	top: 7px;
+	left: 10px;
+}
+
+.slider-list .owl-prev {
+	left: 50%;
+	margin-left: -225px;
+}
+
+.slider-list .owl-next {
+	right: 50%;
+	margin-right: -575px;
+}
+
+.slider-list .owl-next:before {
+	top: 10px;
+	left: 7px;
+}
+
+.slider-list .owl-dots .active {
+    width: 7px;
+	height: 7px;
+	background: #ba984a;
+	border: 4px solid #fff;
+}

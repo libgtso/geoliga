@@ -1,0 +1,165 @@
+@import "var";
+
+html, body{
+	height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #f7f3ed;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-size: 40px;
+    color: #8a785e;
+    font-family: 'FuturaPTHeavy', sans-serif;
+}
+
+a{
+    color: @c-link;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+img {
+    border: 0;
+    vertical-align: top;
+}
+
+svg{
+    display: block;
+}
+
+.page{
+    color: #2b2114;
+    font: 14px 'MuseoSansCyrl', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+    outline: none;
+
+    &__container{
+        margin: 0 auto;
+        width: 1020px;
+        padding: 0 40px;
+    }
+
+    &__footer{
+        height: 100px;
+    }
+}
+
+.icon{
+    &-sprite{
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -1000px;
+    }
+}
+
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+
+.column {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.title {
+    font-family: 'FuturaPTHeavy', sans-serif;
+    text-transform: uppercase;
+}
+
+.owl-item {
+    z-index: 999;
+    display: inline-block;
+    width: 200px;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.owl-prev {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 150px;
+    bottom: 28px;
+    transform: rotate(45deg);
+}
+
+.owl-next {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    bottom: 28px;
+    transform: rotate(45deg);
+}
+
+.owl-dots {
+    width: 55px;
+    height: 20px;
+    position: absolute;
+    bottom: 33px;
+    right: 79px;
+}
+
+.owl-dot {
+    width: 5px;
+    height: 5px;
+    background: #8a785e;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    border-radius: 50%;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.header__txt {
+    border-bottom: 3px solid #ecc97b;
+    font-weight: bolder;
+}
+
+.fancybox-inner {
+    border: 10px solid #fff;
+    border-radius: 5px;
+}
+
+.fancybox-close {
+    background: @c-brown;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 5px;
+    right: -15px;
+
+    &:before {
+        position: absolute;
+        content: '+';
+        transform: rotate(45deg);
+        font-size: 30px;
+        color: #fff;
+        left: 11px;
+        width: 20px;
+        height: 20px;
+        top: -4px;
+    }
+}

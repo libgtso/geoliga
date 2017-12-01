@@ -1,0 +1,22 @@
+@import "../base/var";
+
+.fancybox{
+	display: none;
+
+	&__close{
+		display: block;
+		position: absolute;
+		top: 30px;
+		right: 30px;
+	}
+
+	&__wrapper{
+		box-shadow: 0 2px 14px fade(@c-black, 22%);
+		min-width: 500px;
+		min-height: 200px;
+		border-radius: 12px;
+		background: @c-white;
+		padding: 25px 50px 25px 35px;
+		box-sizing: border-box;
+	}
+}

@@ -1,0 +1,48 @@
+{% set service = [
+	{	'type':'first',
+		'img': './images/river.png',
+		'alt': 'Берегоукрепление',
+		'title': 'Берегоукрепление',
+		'txt': 'Существует несколько основных методик и решений, для реализации которых прим еняются влагостойкие и высокопрочные материалы, среди которых сваи...',
+		'href': './',
+		'link': 'читать подробнее'
+	},
+	{
+		'type':'forward',
+		'typeimg':'forward',
+		'img': './images/skam.png',
+		'alt': 'Укрепление склона',
+		'title': 'Укрепление склона',
+		'txt': 'Когда вы приобретаете земельный участок с домом, то не всегда он оправдывает ваши ожидания и соответствует вашим мечтам. Например, на территории может...',
+		'href': './',
+		'link': 'читать подробнее',
+		'typeaccel': 'left'
+	},
+	{
+		'type':'last',
+		'img': './images/river.png',
+		'alt': 'Искуственные пруды',
+		'title': 'Искуственные пруды',
+		'txt': 'Когда вы приобретаете земельный участок с домом, то не всегда он оправдывает ваши ожидания и соответствует вашим мечтам. Например, на территории может...',
+		'href': './',
+		'link': 'читать подробнее'
+	}
+]%}
+
+<div class="service">
+	<div class="service-content">
+	{% for item in service %}		
+		<div class="service-unit clearfix">
+			<div class="service-unit_img{% if item.typeimg %} service-unit_img-{{item.typeimg}}{% endif %}">
+				<img class="service-img" src="{{item.img}}" alt="{{item.alt}}">
+				<a id="service" href="./images/river.png"><div class="accel{% if item.typeaccel %} accel-{{item.typeaccel}}{% endif %}"></div></a>
+			</div>
+			<div class="service-unit_desc{% if item.type %}-{{item.type}}{% endif %}">
+				<span class="service-unit_title title">{{item.title}}</span>
+				<p class="service-unit_txt">{{item.txt}}</p>
+				<a href="{{item.href}}" class="service-unit_link">{{item.link}}</a>
+			</div>			
+		</div>		
+	{% endfor %}
+	</div>
+</div>
